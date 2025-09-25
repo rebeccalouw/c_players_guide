@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The_Thing_Namer_3000", "The_Thing_Namer_3000.csproj", "{8EAA7AB1-C66B-4088-82B3-EAB5FF1DFCDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EAA7AB1-C66B-4088-82B3-EAB5FF1DFCDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EAA7AB1-C66B-4088-82B3-EAB5FF1DFCDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EAA7AB1-C66B-4088-82B3-EAB5FF1DFCDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EAA7AB1-C66B-4088-82B3-EAB5FF1DFCDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

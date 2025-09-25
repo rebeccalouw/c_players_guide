@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The_Replicator_of_D_To", "The_Replicator_of_D_To.csproj", "{F398C62C-8D4E-4835-9269-44448A3738DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F398C62C-8D4E-4835-9269-44448A3738DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F398C62C-8D4E-4835-9269-44448A3738DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F398C62C-8D4E-4835-9269-44448A3738DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F398C62C-8D4E-4835-9269-44448A3738DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
