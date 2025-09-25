@@ -1,0 +1,14 @@
+/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/The_Dominion _Of_Kings/bin/Debug/net9.0/The_Dominion _Of_Kings
+/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/The_Dominion _Of_Kings/bin/Debug/net9.0/The_Dominion _Of_Kings.deps.json
+/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/The_Dominion _Of_Kings/bin/Debug/net9.0/The_Dominion _Of_Kings.runtimeconfig.json
+/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/The_Dominion _Of_Kings/bin/Debug/net9.0/The_Dominion _Of_Kings.dll
+/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/The_Dominion _Of_Kings/bin/Debug/net9.0/The_Dominion _Of_Kings.pdb
+/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/The_Dominion _Of_Kings/obj/Debug/net9.0/The_Dominion _Of_Kings.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/The_Dominion _Of_Kings/obj/Debug/net9.0/The_Dominion _Of_Kings.AssemblyInfoInputs.cache
+/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/The_Dominion _Of_Kings/obj/Debug/net9.0/The_Dominion _Of_Kings.AssemblyInfo.cs
+/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/The_Dominion _Of_Kings/obj/Debug/net9.0/The_Dominion _Of_Kings.csproj.CoreCompileInputs.cache
+/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/The_Dominion _Of_Kings/obj/Debug/net9.0/The_Dominion _Of_Kings.dll
+/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/The_Dominion _Of_Kings/obj/Debug/net9.0/refint/The_Dominion _Of_Kings.dll
+/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/The_Dominion _Of_Kings/obj/Debug/net9.0/The_Dominion _Of_Kings.pdb
+/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/The_Dominion _Of_Kings/obj/Debug/net9.0/The_Dominion _Of_Kings.genruntimeconfig.cache
+/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/The_Dominion _Of_Kings/obj/Debug/net9.0/ref/The_Dominion _Of_Kings.dll
