@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Repairing_The_Clocktower/1.0.0": {
+        "runtime": {
+          "Repairing_The_Clocktower.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Repairing_The_Clocktower/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
