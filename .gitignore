@@ -1,0 +1,37 @@
+# OS
+.DS_Store
+
+# Build output
+bin/
+obj/
+artifacts/
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# NuGet
+*.nupkg
+*.snupkg
+# If you still use packages.config:
+packages/
+# Lock file is fine to commit; comment out next line if you prefer to keep it
+# packages.lock.json
+
+# Rider / IntelliJ
+.idea/
+*.sln.iml
+*.DotSettings.user
+
+# Visual Studio / VS for Mac (safe to ignore even if you use Rider)
+.vs/
+*.user
+*.suo
+*.userprefs
+
+# Logs
+*.log
+
+# Resharper / NCrunch / others
+_ReSharper.Caches/
+*.ncrunch*
