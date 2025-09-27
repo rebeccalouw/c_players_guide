@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/Taking_A_Number/Taking_A_Number.csproj",
+      "projectUniqueName": "/Users/rebeccalouw/Documents/Dev projects/Projects/C_Players_Guide_Local/Taking_A_Number/Taking_A_Number.csproj",
       "projectName": "Taking_A_Number",
-      "projectPath": "/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/Taking_A_Number/Taking_A_Number.csproj",
+      "projectPath": "/Users/rebeccalouw/Documents/Dev projects/Projects/C_Players_Guide_Local/Taking_A_Number/Taking_A_Number.csproj",
       "packagesPath": "/Users/rebeccalouw/.nuget/packages/",
-      "outputPath": "/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/Taking_A_Number/obj/",
+      "outputPath": "/Users/rebeccalouw/Documents/Dev projects/Projects/C_Players_Guide_Local/Taking_A_Number/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/rebeccalouw/.nuget/NuGet/NuGet.Config"
