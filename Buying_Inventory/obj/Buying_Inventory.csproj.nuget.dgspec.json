@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/Buying_Inventory/Buying_Inventory.csproj": {}
+    "/Users/rebeccalouw/Documents/Dev projects/Projects/C_Players_Guide_Local/Buying_Inventory/Buying_Inventory.csproj": {}
   },
   "projects": {
-    "/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/Buying_Inventory/Buying_Inventory.csproj": {
+    "/Users/rebeccalouw/Documents/Dev projects/Projects/C_Players_Guide_Local/Buying_Inventory/Buying_Inventory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/Buying_Inventory/Buying_Inventory.csproj",
+        "projectUniqueName": "/Users/rebeccalouw/Documents/Dev projects/Projects/C_Players_Guide_Local/Buying_Inventory/Buying_Inventory.csproj",
         "projectName": "Buying_Inventory",
-        "projectPath": "/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/Buying_Inventory/Buying_Inventory.csproj",
+        "projectPath": "/Users/rebeccalouw/Documents/Dev projects/Projects/C_Players_Guide_Local/Buying_Inventory/Buying_Inventory.csproj",
         "packagesPath": "/Users/rebeccalouw/.nuget/packages/",
-        "outputPath": "/Users/rebeccalouw/Documents/Dev projects/Projects/C# Player's Guide/Buying_Inventory/obj/",
+        "outputPath": "/Users/rebeccalouw/Documents/Dev projects/Projects/C_Players_Guide_Local/Buying_Inventory/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/rebeccalouw/.nuget/NuGet/NuGet.Config"
