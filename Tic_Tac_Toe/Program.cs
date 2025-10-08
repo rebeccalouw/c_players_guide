@@ -75,16 +75,16 @@ public class Player
             Console.WriteLine();
 
             Square chosenSquare = key switch
-            {
-                ConsoleKey.NumPad7 => new Square(0, 0),
-                ConsoleKey.NumPad8 => new Square(0,1),
-                ConsoleKey.NumPad9 => new Square(0, 2),
-                ConsoleKey.NumPad4 => new Square(1,0),
-                ConsoleKey.NumPad5 => new Square(1,1),
-                ConsoleKey.NumPad6 => new Square(1,2),
-                ConsoleKey.NumPad1 => new Square(2,0),
-                ConsoleKey.NumPad2 => new Square(2,1),
-                ConsoleKey.NumPad3 => new Square(2,2)
+            {   
+                ConsoleKey.D7 => new Square(0, 0),
+                ConsoleKey.D8 => new Square(0,1),
+                ConsoleKey.D9 => new Square(0, 2),
+                ConsoleKey.D4 => new Square(1,0),
+                ConsoleKey.D5 => new Square(1,1),
+                ConsoleKey.D6 => new Square(1,2),
+                ConsoleKey.D1 => new Square(2,0),
+                ConsoleKey.D2 => new Square(2,1),
+                ConsoleKey.D3 => new Square(2,2)
             };
             
             if (board.IsEmpty(chosenSquare.Row, chosenSquare.Column))
