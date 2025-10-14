@@ -1,7 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-
-// Fountain of Objects - Pits + Maelstrom expansion
+// Fountain of Objects - Pits + Maelstrom + Amaroks expansion
 
 FountainOfObjectsGame game = CreateSmallGame();
 game.Run();
@@ -22,7 +21,8 @@ FountainOfObjectsGame CreateSmallGame()
 
     Monster[] monsters = new Monster[]
     {
-        new Maelstrom(new Location(3, 2))
+        new Maelstrom(new Location(3, 2)),
+        new Amarok(new Location(2,2))
     };
 
     return new FountainOfObjectsGame(map, new Player(start), monsters);
@@ -64,7 +64,8 @@ public class FountainOfObjectsGame
             new LightInEntranceSense(),
             new FountainSense(),
             new DraftFromPitSense(),
-            new MaelstromSense()
+            new MaelstromSense(),
+            new AmarokSense()
         };
     }
 
@@ -257,6 +258,14 @@ public class Maelstrom : Monster
     }
 }
 
+public class Amarok : Monster
+{
+    public Amarok (Location start) : base(start) { }
+
+    public override void Activate(FountainOfObjectsGame game) =>
+        game.Player.Kill("You have encountered an Amarok, you are dead.");
+}
+
 // An interface to represent one of many commands in the game. Each new command should
 // implement this interface.
 public interface ICommand
@@ -372,6 +381,28 @@ public class MaelstromSense : ISense
 
     public void DisplaySense(FountainOfObjectsGame game) =>
         Console.WriteLine("You hear the growling and groaning of a maelstrom nearby.");
+}
+
+public class AmarokSense : ISense
+{
+    public bool CanSense(FountainOfObjectsGame game)
+    {
+        foreach (Monster monster in game.Monsters)
+        {
+            if (monster is Amarok && monster.IsAlive)
+            {
+                int rowDifference = Math.Abs(monster.Location.Row - game.Player.Location.Row);
+                int columnDifference = Math.Abs(monster.Location.Column - game.Player.Location.Column);
+                
+                if (rowDifference <= 1 && columnDifference <= 1) return true;
+            }
+        }
+
+        return false;
+    }
+
+    public void DisplaySense(FountainOfObjectsGame game) =>
+        ConsoleHelper.WriteLine("You can smell the rotten stench of an amarok in a nearby room.", ConsoleColor.DarkRed);
 }
 
 // A collection of helper methods for writing text to the console using specific colors.

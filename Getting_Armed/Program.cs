@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
-// Fountain of Objects - Pits + Maelstrom expansion
+// Fountain of Objects - Pits + Maelstrom + Amaroks + Getting Armed expansion
 
 FountainOfObjectsGame game = CreateSmallGame();
 game.Run();
@@ -22,7 +22,8 @@ FountainOfObjectsGame CreateSmallGame()
 
     Monster[] monsters = new Monster[]
     {
-        new Maelstrom(new Location(3, 2))
+        new Maelstrom(new Location(3, 2)),
+        new Amarok(new Location(2,2))
     };
 
     return new FountainOfObjectsGame(map, new Player(start), monsters);
@@ -64,7 +65,8 @@ public class FountainOfObjectsGame
             new LightInEntranceSense(),
             new FountainSense(),
             new DraftFromPitSense(),
-            new MaelstromSense()
+            new MaelstromSense(),
+            new AmarokSense()
         };
     }
 
@@ -103,6 +105,7 @@ public class FountainOfObjectsGame
     {
         ConsoleHelper.WriteLine("--------------------------------------------------------------------------------", ConsoleColor.Gray);
         ConsoleHelper.WriteLine($"You are in the room at (Row={Player.Location.Row}, Column={Player.Location.Column}).", ConsoleColor.Gray);
+        ConsoleHelper.WriteLine($"You have {Player.ArrowsRemaining} arrows remaining.", ConsoleColor.Gray);
         foreach (ISense sense in _senses)
             if (sense.CanSense(this))
                 sense.DisplaySense(this);
@@ -122,6 +125,10 @@ public class FountainOfObjectsGame
             if (input == "move south") return new MoveCommand(Direction.South);
             if (input == "move east") return new MoveCommand(Direction.East);
             if (input == "move west") return new MoveCommand(Direction.West);
+            if (input == "shoot north") return new ShootCommand(Direction.North);
+            if (input == "shoot south") return new ShootCommand(Direction.South);
+            if (input == "shoot east") return new ShootCommand(Direction.East);
+            if (input == "shoot west") return new ShootCommand(Direction.South);
             if (input == "enable fountain") return new EnableFountainCommand();
             // More commands go here.
 
@@ -202,6 +209,8 @@ public class Player
 
     // Explains why a player died. Empty string until death.
     public string CauseOfDeath { get; private set; } = "";
+    
+    public int ArrowsRemaining { get; set; } = 5;
 
     // Creates a new player that starts at the given location.
     public Player(Location start) => Location = start;
@@ -257,6 +266,14 @@ public class Maelstrom : Monster
     }
 }
 
+public class Amarok : Monster
+{
+    public Amarok (Location start) : base(start) { }
+
+    public override void Activate(FountainOfObjectsGame game) =>
+        game.Player.Kill("You have encountered an Amarok, you are dead.");
+}
+
 // An interface to represent one of many commands in the game. Each new command should
 // implement this interface.
 public interface ICommand
@@ -293,6 +310,50 @@ public class MoveCommand : ICommand
             game.Player.Location = newLocation;
         else
             ConsoleHelper.WriteLine("There is a wall there.", ConsoleColor.Red);
+    }
+}
+
+public class ShootCommand : ICommand
+{
+    public Direction Direction { get; }
+
+    public ShootCommand(Direction direction)
+    {
+        Direction = direction;
+    }
+
+    public void Execute(FountainOfObjectsGame game)
+    {
+        if (game.Player.ArrowsRemaining == 0)
+        {
+            ConsoleHelper.WriteLine("You don't have any arrows left.", ConsoleColor.Red);
+            return;
+        }
+
+        Location currentLocation = game.Player.Location;
+        Location targetLocation = Direction switch
+        {
+            Direction.North => new Location(currentLocation.Row - 1, currentLocation.Column),
+            Direction.South => new Location(currentLocation.Row + 1, currentLocation.Column),
+            Direction.West => new Location(currentLocation.Row, currentLocation.Column - 1),
+            Direction.East => new Location(currentLocation.Row, currentLocation.Column + 1)
+        };
+
+        bool foundSomething = false;
+
+        foreach (Monster monster in game.Monsters)
+        {
+            if (monster.Location == targetLocation && monster.IsAlive)
+            {
+                monster.IsAlive = false;
+                foundSomething = true;
+            }
+        }
+        
+        if(foundSomething) ConsoleHelper.WriteLine("Your arrow hit something. That monster is now dead!", ConsoleColor.Green);
+        else ConsoleHelper.WriteLine("Your arrow missed the target.", ConsoleColor.Magenta);
+        
+        game.Player.ArrowsRemaining--;
     }
 }
 
@@ -372,6 +433,28 @@ public class MaelstromSense : ISense
 
     public void DisplaySense(FountainOfObjectsGame game) =>
         Console.WriteLine("You hear the growling and groaning of a maelstrom nearby.");
+}
+
+public class AmarokSense : ISense
+{
+    public bool CanSense(FountainOfObjectsGame game)
+    {
+        foreach (Monster monster in game.Monsters)
+        {
+            if (monster is Amarok && monster.IsAlive)
+            {
+                int rowDifference = Math.Abs(monster.Location.Row - game.Player.Location.Row);
+                int columnDifference = Math.Abs(monster.Location.Column - game.Player.Location.Column);
+                
+                if (rowDifference <= 1 && columnDifference <= 1) return true;
+            }
+        }
+
+        return false;
+    }
+
+    public void DisplaySense(FountainOfObjectsGame game) =>
+        ConsoleHelper.WriteLine("You can smell the rotten stench of an amarok in a nearby room.", ConsoleColor.DarkRed);
 }
 
 // A collection of helper methods for writing text to the console using specific colors.
