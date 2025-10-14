@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The_Fountain_Of_Objects", "The_Fountain_Of_Objects.csproj", "{C1E469F0-2764-4A99-A704-C2E56DD4EDD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1E469F0-2764-4A99-A704-C2E56DD4EDD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1E469F0-2764-4A99-A704-C2E56DD4EDD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1E469F0-2764-4A99-A704-C2E56DD4EDD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1E469F0-2764-4A99-A704-C2E56DD4EDD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
