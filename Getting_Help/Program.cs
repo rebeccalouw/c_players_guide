@@ -1,18 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
-// Challenge: Time in the Cavern
+// Fountain of Objects - Pits + Maelstrom + Amaroks + Getting Armed + Getting Help expansion
 
-DateTime startTime = DateTime.Now;
 FountainOfObjectsGame game = CreateSmallGame();
+
 gameIntro();
+
 game.Run();
-DateTime endTime = DateTime.Now;
-TimeSpan timeInCaverns = endTime - startTime;
-
-Console.WriteLine($"You were in the caverns for: {timeInCaverns.Minutes}m {timeInCaverns.Seconds}s.");
-
-
 
 // -------------------------------------------------------------------------------
 //                                   Methods
