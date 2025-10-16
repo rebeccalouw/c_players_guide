@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The_Feud", "The_Feud.csproj", "{C6E0A172-7408-41B7-AF1D-CA6A0E632609}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6E0A172-7408-41B7-AF1D-CA6A0E632609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6E0A172-7408-41B7-AF1D-CA6A0E632609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6E0A172-7408-41B7-AF1D-CA6A0E632609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6E0A172-7408-41B7-AF1D-CA6A0E632609}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
