@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core_Game_Death", "Core_Game_Death.csproj", "{D8F42A4F-67A1-4C64-BD16-2927BE8DAFF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8F42A4F-67A1-4C64-BD16-2927BE8DAFF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8F42A4F-67A1-4C64-BD16-2927BE8DAFF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8F42A4F-67A1-4C64-BD16-2927BE8DAFF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8F42A4F-67A1-4C64-BD16-2927BE8DAFF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
