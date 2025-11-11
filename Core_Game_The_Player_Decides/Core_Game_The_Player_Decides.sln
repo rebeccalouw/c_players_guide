@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core_Game_The_Player_Decides", "Core_Game_The_Player_Decides.csproj", "{0BB10ED8-28AD-4607-919A-CB065A7CDAAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BB10ED8-28AD-4607-919A-CB065A7CDAAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BB10ED8-28AD-4607-919A-CB065A7CDAAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BB10ED8-28AD-4607-919A-CB065A7CDAAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BB10ED8-28AD-4607-919A-CB065A7CDAAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
