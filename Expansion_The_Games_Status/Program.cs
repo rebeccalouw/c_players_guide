@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-// Challenge: The Player Decides
+// Expansion: The Game Status
 
 using System.Runtime.CompilerServices;
 using Terminal.Gui;
@@ -376,12 +376,44 @@ class Battle
         
         foreach (Character character in snapshot)
         {
+            ShowStatus(character);
+            
             Ui.Log($"It is {character.Name}'s turn...");
             IAction action = controller.PickAction(this, character);
             action.Run();
-            Ui.Log($"--------------------------");
+            Ui.Log($"--------------------------------------------------");
             Thread.Sleep(500);
         }
+    }
+
+    private void ShowStatus(Character active)
+    {
+        Ui.Log(
+            "============================================== BATTLE STATUS ==============================================");
+        
+        Ui.Log(_heroes.Name.ToUpper());
+        foreach (Character hero in _heroes.Members)
+        {
+            string marker = ReferenceEquals(hero, active) ? ">>" : " ";
+            string name = hero.Name.PadRight(12);
+            string hp = $"({hero.CurrentHp}/{hero.MaxHp})";
+            Ui.Log($"{marker} {name} {hp}");
+        }
+        
+        Ui.Log("----------------------------------------- VS -----------------------------------------");
+
+        
+        Ui.Log(_monsters.Name.ToUpper());
+        foreach (Character monster in _monsters.Members)
+        {
+            string marker = ReferenceEquals(monster, active) ? ">>" : " ";
+            string name = monster.Name.PadRight(12);
+            string hp = $"({monster.CurrentHp}/{monster.MaxHp})";
+            Ui.Log($"{marker} {name} {hp}");
+        }
+        
+        Ui.Log("=====================================================================================");
+        Ui.Log(); 
     }
 
     public void RemoveCharacter(Character character)
